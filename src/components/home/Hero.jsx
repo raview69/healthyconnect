@@ -19,10 +19,10 @@ const Hero = () => {
           </div>
           <div>
             {" "}
-            <img src={Hc1} alt="emptylogo" className="w-[473px]" />
+            <img src={Hc1} alt="emptylogo" className="w-[423px]" />
           </div>
         </div>
-        <div className="flex items-center justify-center mt-[30px]">
+        <div className="flex items-center justify-center mt-[20px]">
           <div className="flex items-center justify-between w-[900px]">
             {" "}
             <Link
