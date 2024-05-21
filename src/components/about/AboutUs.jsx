@@ -10,7 +10,7 @@ const AboutUs = () => {
         </div>
         <div className="flex items-center justify-between mt-[120px] w-full">
           <div className="w-1/2">
-            <div className="w-[700px]">
+            <div className="w-[650px]">
               {" "}
               <div>
                 Puskesmas Mentarau adalah puskesmas yang terletak di Kecamatan

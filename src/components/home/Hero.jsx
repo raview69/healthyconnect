@@ -41,7 +41,10 @@ const Hero = () => {
                 </div>
               </div>
             </Link>
-            <div className="w-[400px] h-[334px] bg-[#45B987] rounded-xl shadow-lg flex flex-col items-center justify-center">
+            <Link
+              to="/antrian"
+              className="w-[400px] h-[334px] bg-[#45B987] rounded-xl shadow-lg flex flex-col items-center justify-center"
+            >
               <div>
                 <FaCalendarAlt className="w-[128px] h-[120px] text-white" />
               </div>
@@ -53,7 +56,7 @@ const Hero = () => {
                   Daftar secara online tanpa perlu mengantri di puskesmas
                 </div>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </div>

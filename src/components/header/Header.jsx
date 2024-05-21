@@ -13,7 +13,7 @@ const Header = () => {
         <div className="flex items-center justify-between text-[20px] text-white font-semibold w-[750px]">
           <Link to="/">Home</Link>
           <Link to="/tentang">Tentang Kami</Link>
-          <Link to="/tesst">Jadwal Antrian</Link>
+          <Link to="/antrian">Jadwal Antrian</Link>
           <Link to="/pendaftaran">Pendaftaran Online</Link>
         </div>
       </div>
