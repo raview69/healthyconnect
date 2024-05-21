@@ -1,14 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../../assets/logo_hc.svg";
 
 const Header = () => {
   return (
     <Link to="/">
-      <div
-        data-cy="header-background"
-        className="px-[220px] h-[105px] bg-[#16ABF8] font-bold leading-[36px] text-[24px] text-white flex items-center justify-start"
-      >
-        <h1 data-cy="header-title">TODO LIST APP</h1>
+      <div className="px-[220px] h-[105px] bg-[#49AC82] flex items-center justify-between">
+        <div>
+          {" "}
+          <img src={Logo} alt="emptylogo" className="h-[82px]" />
+        </div>
+        <div className="flex items-center justify-between text-[20px] text-white font-semibold w-[750px]">
+          <Link to="/">Home</Link>
+          <Link to="/tentang">Tentang Kami</Link>
+          <Link to="/tesst">Jadwal Antrian</Link>
+          <Link to="/tesst">Pendaftaran Online</Link>
+        </div>
       </div>
     </Link>
   );
