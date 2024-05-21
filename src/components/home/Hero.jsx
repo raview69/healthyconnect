@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="px-[220px] flex items-center justify-center">
+    <div className="px-[80px] flex items-center justify-center">
       <div className="w-full">
         <div className="flex items-center justify-between w-full">
           <div className="w-[700px]">
@@ -19,7 +19,7 @@ const Hero = () => {
           </div>
           <div>
             {" "}
-            <img src={Hc1} alt="emptylogo" className="w-[443px]" />
+            <img src={Hc1} alt="emptylogo" className="w-[473px]" />
           </div>
         </div>
         <div className="flex items-center justify-center mt-[30px]">

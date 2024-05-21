@@ -45,13 +45,13 @@ const Form = () => {
   };
 
   return (
-    <div className="px-[220px] flex items-center justify-center">
+    <div className="px-[80px] flex items-center justify-center">
       <div className="w-full">
         {" "}
         <div className="text-black text-[40px] font-semibold mt-[70px] w-full text-left">
           Form Pendaftaran
         </div>
-        <div className="flex items-center justify-between ">
+        <div className="flex items-center justify-start ">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div>
               <div className="flex items-center justify-between mt-[20px]">
@@ -158,7 +158,7 @@ const Form = () => {
               </div>
             </div>
           </form>
-          <div>{getCategory(slug)}</div>
+          <div className="ml-[100px]">{getCategory(slug)}</div>
         </div>
       </div>
     </div>

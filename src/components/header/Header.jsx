@@ -5,7 +5,7 @@ import Logo from "../../assets/logo_hc.svg";
 const Header = () => {
   return (
     <Link to="/">
-      <div className="px-[220px] h-[105px] bg-[#49AC82] flex items-center justify-between">
+      <div className="px-[80px] h-[105px] bg-[#49AC82] flex items-center justify-between">
         <div>
           {" "}
           <img src={Logo} alt="emptylogo" className="h-[82px]" />

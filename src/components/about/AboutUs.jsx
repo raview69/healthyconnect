@@ -3,7 +3,7 @@ import Puskemas from "../../assets/puskesmas.png";
 
 const AboutUs = () => {
   return (
-    <div className="px-[220px] flex items-center justify-center">
+    <div className="px-[80px] flex items-center justify-center">
       <div className="w-full">
         <div className="text-black text-[40px] font-semibold mt-[70px] w-full text-center">
           Informasi Pukesmas Mentarau
