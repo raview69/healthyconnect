@@ -1,11 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/header/Header";
-import Dashboard from "./components/dashboard/Dashboard";
-import TodoDetails from "./components/todo/TodoDetails";
+// import Dashboard from "./components/dashboard/Dashboard";
+// import TodoDetails from "./components/todo/TodoDetails";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Pendaftaran from "./pages/Pendaftaran";
+import FormPendaftaran from "./pages/FormPendaftaran";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/tentang" element={<About />} />
         <Route path="/pendaftaran" element={<Pendaftaran />} />
-        {/* <Route path="quests/:id/edit" element={<TodoDetails />} /> */}
+        <Route exact path="/pendaftaran/:slug" element={<FormPendaftaran />} />
       </Routes>
     </div>
   );

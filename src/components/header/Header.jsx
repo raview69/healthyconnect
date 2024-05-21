@@ -14,7 +14,7 @@ const Header = () => {
           <Link to="/">Home</Link>
           <Link to="/tentang">Tentang Kami</Link>
           <Link to="/tesst">Jadwal Antrian</Link>
-          <Link to="/tesst">Pendaftaran Online</Link>
+          <Link to="/pendaftaran">Pendaftaran Online</Link>
         </div>
       </div>
     </Link>
