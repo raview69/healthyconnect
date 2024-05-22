@@ -7,7 +7,7 @@ import Hc6 from "../../assets/hc_6.png";
 import Hc7 from "../../assets/hc_7.png";
 import { useForm } from "react-hook-form";
 import { ModalContext } from "../modal/ModalContext";
-
+import Popup from "../popup/Popup";
 import { useParams, useNavigate } from "react-router-dom";
 
 const Form = () => {
@@ -151,7 +151,12 @@ const Form = () => {
                   </div>
                 </div>
                 <div className="ml-8 text-[24px] flex items-center justify-between">
-                  <div className="bg-[#49AC82] px-[40px] py-[8px] text-white rounded-lg">
+                  <div
+                    onClick={() =>
+                      handleModal(<Popup category={slug?.toUpperCase()} />)
+                    }
+                    className="bg-[#49AC82] px-[40px] py-[8px] text-white rounded-lg"
+                  >
                     Submit
                   </div>
                 </div>
