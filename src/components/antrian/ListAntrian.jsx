@@ -2,7 +2,7 @@ import React from "react";
 
 const ListAntrian = () => {
   return (
-    <div className="px-[80px] flex items-center justify-center">
+    <div className="px-[80px] pb-[80px] flex items-center justify-center">
       <div className="w-full flex flex-col items-center justify-center">
         <div className="text-black text-[40px] font-semibold mt-[70px] w-full text-center">
           <p> Antrian Saat Ini</p>

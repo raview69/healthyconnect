@@ -3,14 +3,14 @@ import Puskemas from "../../assets/puskesmas.png";
 
 const AboutUs = () => {
   return (
-    <div className="px-[80px] flex items-center justify-center">
+    <div className="px-[80px] pb-[80px] flex items-center justify-center">
       <div className="w-full">
         <div className="text-black text-[40px] font-semibold mt-[70px] w-full text-center">
           Informasi Pukesmas Mentarau
         </div>
         <div className="flex items-center justify-between mt-[120px] w-full">
           <div className="w-1/2">
-            <div className="w-[650px]">
+            <div className="w-[600px]">
               {" "}
               <div>
                 Puskesmas Mentarau adalah puskesmas yang terletak di Kecamatan

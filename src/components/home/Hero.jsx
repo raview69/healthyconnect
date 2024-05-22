@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <div className="px-[80px] flex items-center justify-center">
+    <div className="px-[80px] pb-[80px] flex items-center justify-center">
       <div className="w-full">
         <div className="flex items-center justify-between w-full">
           <div className="w-[700px]">
