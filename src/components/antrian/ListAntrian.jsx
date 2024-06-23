@@ -1,6 +1,9 @@
 import React from "react";
+import { useGetUserQuery } from "../../redux/services/userApi";
 
 const ListAntrian = () => {
+  const { data, error, isLoading } = useGetUserQuery();
+  console.log(data);
   return (
     <div className="px-[80px] pb-[80px] flex items-center justify-center">
       <div className="w-full flex flex-col items-center justify-center">
