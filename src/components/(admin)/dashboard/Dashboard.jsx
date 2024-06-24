@@ -31,20 +31,35 @@ const Dashboard = () => {
   }, [userData]);
 
   return (
-    <div className="px-[80px] pb-[80px] flex items-center justify-center">
+    <div className="px-[80px] py-[80px] flex items-center justify-center">
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
-          {userData?.map((data, index) => {
-            return (
-              <div key={index} className="flex">
-                <div className="mr-2">{data.id}</div>
-                <div>{data.email}</div>
-              </div>
-            );
-          })}
+          <table class="table-auto w-[800px] text-[20px]">
+            <thead>
+              <tr>
+                <th className="border-2">No</th>
+                <th className="border-2">Email</th>
+                <th className="border-2">Jenis Layanan</th>
+                <th className="border-2">Keluhan</th>
+              </tr>
+            </thead>
+            <tbody>
+              {userData?.map((data, index) => {
+                return (
+                  <tr key={index}>
+                    <td className="border-[2px] p-2">{index + 1}</td>
+                    <td className="border-[2px] p-2">{data.email}</td>
+                    <td className="border-[2px] p-2">{data.jenis_layanan}</td>
+                    <td className="border-[2px] p-2">{data.keluhan}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
         </div>
-
-        <button>Kirim antrian selanjutnya</button>
+        <button className="bg-[#49AC82] px-[40px] py-[8px] text-white rounded-lg cursor-pointer mt-4">
+          Antrian Selanjutnya
+        </button>
       </form>
     </div>
   );
