@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { removeAuthentication } from "../features/authenticationSlice";
-// import "dotenv/config";
 
 const baseQuery = fetchBaseQuery({
   baseUrl: "https://hc-backend-express.vercel.app",

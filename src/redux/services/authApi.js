@@ -17,9 +17,10 @@ export const authApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     signIn: builder.mutation({
       query: (data) => ({
-        url: "/api/v1/session",
+        url: "/api/v1/auth/login",
         method: "POST",
         body: data,
+        withCredentials: true,
       }),
       async onQueryStarted(_, { dispatch, queryFulfilled }) {
         await onQueryStartedSignIn({ dispatch, queryFulfilled });
@@ -28,7 +29,7 @@ export const authApi = baseApi.injectEndpoints({
     }),
     signOut: builder.mutation({
       query: () => ({
-        url: "/api/v1/session",
+        url: "/api/v1/auth/login",
         method: "DELETE",
       }),
       invalidatesTags: ["User"],

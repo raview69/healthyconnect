@@ -8,6 +8,7 @@ import About from "./pages/About";
 import Pendaftaran from "./pages/Pendaftaran";
 import FormPendaftaran from "./pages/FormPendaftaran";
 import Antrian from "./pages/Antrian";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/antrian" element={<Antrian />} />
         <Route path="/pendaftaran" element={<Pendaftaran />} />
         <Route exact path="/pendaftaran/:slug" element={<FormPendaftaran />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </div>
   );

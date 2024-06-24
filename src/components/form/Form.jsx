@@ -9,37 +9,51 @@ import { useForm } from "react-hook-form";
 import { ModalContext } from "../modal/ModalContext";
 import Popup from "../popup/Popup";
 import { useParams, useNavigate } from "react-router-dom";
+import { usePostUserMutation } from "../../redux/services/userApi";
 
 const Form = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const { handleModal } = useContext(ModalContext);
+  const [postUser] = usePostUserMutation();
 
-  const { register, handleSubmit, setValue } = useForm({
+  const { register, handleSubmit, setValue, reset } = useForm({
     defaultValues: {
+      nik: "",
+      jenis_layanan: "",
+      keluhan: "",
+      no_phone: "",
       email: "",
-      activity_group_id: "sds",
-      priority: "very-high",
+      penjamin: "BPJS",
     },
   });
 
   const onSubmit = async (data) => {
-    console.log(data);
+    const res = await postUser(data);
+    console.log(res);
+    handleModal(<Popup category={slug?.toUpperCase()} />);
+    reset();
   };
 
   const getCategory = (value) => {
     switch (value) {
       case "umum":
+        setValue("jenis_layanan", "Umum");
         return <img src={Hc2} alt="hc_2" className="w-[438px]" />;
       case "anak":
+        setValue("jenis_layanan", "Anak");
         return <img src={Hc3} alt="hc_3" className="w-[438px]" />;
       case "gigi":
+        setValue("jenis_layanan", "Gigi");
         return <img src={Hc4} alt="hc_4" className="w-[438px]" />;
       case "lansia":
+        setValue("jenis_layanan", "Lansia");
         return <img src={Hc5} alt="hc_5" className="w-[438px]" />;
       case "vaksin":
+        setValue("jenis_layanan", "Vaksin");
         return <img src={Hc6} alt="hc_6" className="w-[438px]" />;
       case "imunisasi":
+        setValue("jenis_layanan", "Imunisasi");
         return <img src={Hc7} alt="hc_7" className="w-[438px]" />;
     }
   };
@@ -62,8 +76,8 @@ const Form = () => {
                 <div className="ml-6">
                   {" "}
                   <input
-                    {...register("email")}
-                    type="email"
+                    {...register("nik")}
+                    type="text"
                     placeholder="Masukkan NIK"
                     className="w-[480px] outline-none flex items-center justify-start text-black text-[24px] leading-[150%] px-[10px] py-[6px] rounded-lg bg-white"
                   />
@@ -93,8 +107,8 @@ const Form = () => {
                 <div className="ml-6">
                   {" "}
                   <input
-                    {...register("email")}
-                    type="email"
+                    {...register("keluhan")}
+                    type="text"
                     placeholder="Masukkan Keluhan"
                     className="w-[480px] outline-none flex items-center justify-start text-black text-[24px] leading-[150%] px-[10px] py-[6px] rounded-lg bg-white"
                   />
@@ -108,8 +122,8 @@ const Form = () => {
                 <div className="ml-6">
                   {" "}
                   <input
-                    {...register("email")}
-                    type="email"
+                    {...register("no_phone")}
+                    type="number"
                     placeholder="Masukkan No. Whatsapp"
                     className="w-[480px] outline-none flex items-center justify-start text-black text-[24px] leading-[150%] px-[10px] py-[6px] rounded-lg bg-white"
                   />
@@ -151,14 +165,9 @@ const Form = () => {
                   </div>
                 </div>
                 <div className="ml-8 text-[24px] flex items-center justify-between">
-                  <div
-                    onClick={() =>
-                      handleModal(<Popup category={slug?.toUpperCase()} />)
-                    }
-                    className="bg-[#49AC82] px-[40px] py-[8px] text-white rounded-lg"
-                  >
+                  <button className="bg-[#49AC82] px-[40px] py-[8px] text-white rounded-lg">
                     Submit
-                  </div>
+                  </button>
                 </div>
               </div>
             </div>

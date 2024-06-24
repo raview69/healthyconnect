@@ -29,6 +29,14 @@ export const userApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: ["User"],
     }),
+    sendEmail: builder.mutation({
+      query: (data) => ({
+        url: "/api/v1/user/sendemail",
+        method: "POST",
+        body: data,
+      }),
+      invalidatesTags: ["User"],
+    }),
   }),
 });
 
@@ -37,4 +45,5 @@ export const {
   usePostUserMutation,
   useUpdateUserMutation,
   useDeleteUserMutation,
+  useSendEmailMutation,
 } = userApi;
